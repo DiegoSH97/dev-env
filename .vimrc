@@ -48,6 +48,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 "Git diff
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 
 "CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
@@ -71,13 +73,28 @@ Plug 'noahfrederick/vim-composer'
 Plug 'noahfrederick/vim-laravel'
 
 "Indent-guides
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "PHP
-Plug 'stephpy/vim-php-cs-fixer'
+Plug 'aeke/vim-php-cs-fixer'
+
+"PHP XDEBUG
+Plug 'brookhong/dbgpavim'
 
 "Emmet
 Plug 'mattn/emmet-vim'
+
+"Twing
+Plug 'lumiliet/vim-twig'
+
+"Python 
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build'}
+
+"Docker
+Plug 'ekalinin/dockerfile.vim'
+Plug 'kkvh/vim-docker-tools'
+
 call plug#end()
 
 "Vim-One
@@ -121,3 +138,7 @@ hi IndentGuidesEven ctermbg=darkgrey
 
 "PHP-CS-FIXER
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+"PHP XDEBUG
+let g:dbgPavimOnce = 1
+let g:dbgPavimBreakAtEntry = 1

@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/diegos/.oh-my-zsh"
-
+export XDEBUG_CONFIG="idekey=VSCODE"
 #Theme
 ZSH_THEME="robbyrussell"
 
 #Plugins
-plugins=(git docker docker-compose composer laravel)
+plugins=(git docker docker-compose docker-machine composer laravel homestead vagrant tmux)
 
 #NVM
 export NVM_DIR=~/.nvm
@@ -74,7 +74,7 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 #Colors
-source $(dirname $(gem which colorls))/tab_complete.sh
+#source $(dirname $(gem which colorls))/tab_complete.sh
 
 #Alias
 alias c="clear"
@@ -83,3 +83,6 @@ alias l="colorls --group-directories-first --almost-all"
 alias ll="colorls --group-directories-first --almost-all --long"
 alias ls="colorls -h --group-directories-first -1"
 alias n="nvim ." 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
